@@ -1,0 +1,2 @@
+# Create a video stream whenever the Canon is connected
+ACTION=="add", SUBSYSTEM=="usb", ENV{ID_VENDOR_FROM_DATABASE}=="Canon, Inc.", TAG+="systemd", ENV{SYSTEMD_WANTS}="dslr-webcam.service"
